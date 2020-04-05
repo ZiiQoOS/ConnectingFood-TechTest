@@ -5,8 +5,10 @@
     "strict": true,
     "jsx": "react",
     "rootDir": "./src",
-    "incremental": true,
     "experimentalDecorators": true,
-    "lib": ["dom", "es2015"]
+    "lib": [
+      "dom",
+      "es2015"
+    ]
   }
 }

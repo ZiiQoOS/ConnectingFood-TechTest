@@ -1,16 +1,16 @@
 {
-  "name": "ts-react-parcel",
-  "version": "2.0.0",
-  "description": "Typescript with React, using parcel bundler",
+  "name": "connecting-food-tech-test",
+  "version": "1.0.0",
+  "description": "Connecting Food technical test",
   "repository": {
     "type": "git",
-    "url": "https://github.com/adhrinae/ts-react-parcel"
+    "url": "https://github.com/ZiiQoOS/ConnectingFood-TechTest.git"
   },
-  "author": "Ahn Dohyung",
+  "author": "Ahmed-Zakaria ESDAIRI",
   "license": "MIT",
   "main": "src/index.tsx",
   "scripts": {
-    "develop": "concurrently -r \"npm:type-check:watch\" \"npm:start\"",
+    "dev": "concurrently -r \"npm:type-check:watch\" \"npm:start\"",
     "start": "parcel ./src/index.html",
     "build": "npm run type-check && parcel build ./src/index.html --public-url '/'",
     "prettify": "prettier --write './src/**/*.{ts,tsx}'",
@@ -18,15 +18,6 @@
     "test:watch": "jest --watch",
     "type-check": "tsc --noEmit",
     "type-check:watch": "tsc --noEmit --watch"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run prettify && npm run test"
-    }
-  },
-  "engines": {
-    "node": ">= 8.11.0",
-    "npm": ">= 6.0.0"
   },
   "jest": {
     "preset": "ts-jest",
@@ -51,6 +42,7 @@
     "Parcel"
   ],
   "dependencies": {
+    "antd": "^4.1.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
@@ -60,7 +52,6 @@
     "@types/react": "^16.8.14",
     "@types/react-dom": "^16.8.4",
     "concurrently": "^4.1.0",
-    "husky": "^1.3.1",
     "jest": "^24.7.1",
     "jest-dom": "^3.1.3",
     "jest-extended": "^0.11.1",
