@@ -1,0 +1,9 @@
+export const sunrise = require('./sunrise.svg');
+export const sunset = require('./sunset.svg');
+export const wind = require('./wind.svg');
+export const humidity = require('./humidity.svg');
+export const cloud = require('./cloud.svg');
+export const windsock = require('./windsock.svg');
+export const pressure = require('./pressure.svg');
+export const hot_temp = require('./hot_temp.svg');
+export const cold_temp = require('./cold_temp.svg');
