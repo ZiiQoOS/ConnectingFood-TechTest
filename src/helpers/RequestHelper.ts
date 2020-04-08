@@ -1,11 +1,11 @@
 import {AxiosRequestConfig} from "axios";
 
 export default class RequestHelper {
-    static getRequestConfig(method: string, url: string, city: string): AxiosRequestConfig {
+    static getRequestConfig(url: string, city: string): AxiosRequestConfig {
         let config = {
-            method: method,
+            method: 'GET',
             baseURL: process.env.API_URL,
-            url: url,
+            url,
             params: {
                 units: 'metric',
                 q: city,
@@ -14,6 +14,7 @@ export default class RequestHelper {
                 lang: 'fr'
             }
         };
+        // @ts-ignore
         return config;
     }
 }
