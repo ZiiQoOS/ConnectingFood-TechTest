@@ -4,16 +4,17 @@ import {useState} from "react";
 import {Modal, Card} from "antd";
 import DateHelper from "../../helpers/DateHelper";
 import Forecast from "../../Models/Forecast";
-
-import sunrise from '../../../public/images/sunrise.svg';
-import sunset from '../../../public/images/sunset.svg';
-import wind from '../../../public/images/wind.svg';
-import humidity from '../../../public/images/humidity.svg';
-import cloud from '../../../public/images/cloud.svg';
-import windsock from '../../../public/images/windsock.svg';
-import pressure from '../../../public/images/pressure.svg';
-import hot_temp from '../../../public/images/hot.svg';
-import cold_temp from '../../../public/images/cold.svg';
+import {
+    sunrise,
+    sunset,
+    wind,
+    humidity,
+    cloud,
+    windsock,
+    pressure,
+    hot_temp,
+    cold_temp
+} from '../../../public/images';
 
 interface ForecastProps {
     forecast: Forecast;
@@ -49,7 +50,7 @@ export const WeatherCard: React.FunctionComponent<ForecastProps> = ({forecast}) 
             </section>
             <Modal
                 visible={visible}
-                title={`Prévisions du ${dayName} ${dayOfMonth} ${monthName} à ${process.env.CITY}`}
+                title={`Prévisions du ${dayName} ${dayOfMonth} ${monthName}`}
                 onCancel={handleCancel}
                 footer={[]}>
                 <Card>
