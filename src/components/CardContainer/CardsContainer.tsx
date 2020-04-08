@@ -6,11 +6,15 @@ import axios, {AxiosError, AxiosResponse} from 'axios';
 import Forecast from "../../Models/Forecast";
 import RequestHelper from "../../helpers/RequestHelper";
 
-export const CardsContainer: React.FunctionComponent = ({}) => {
+interface Props {
+    city: string;
+}
 
+export const CardsContainer: React.FunctionComponent<Props> = ({city}) => {
+    
     const [list, setList] = useState([]);
     useEffect(() => {
-        let requestConfig = RequestHelper.getRequestConfig('GET', 'data/2.5/forecast/daily', 'Paris');
+        let requestConfig = RequestHelper.getRequestConfig('GET', 'data/2.5/forecast/daily', city);
         axios(requestConfig)
             .then((response: AxiosResponse) => setList(response.data.list))
             .catch((error: AxiosError) => console.log(error.message));
