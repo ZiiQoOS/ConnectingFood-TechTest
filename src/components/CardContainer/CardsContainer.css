@@ -3,6 +3,12 @@
     color: #FFAC33;
 }
 
+.error {
+    animation: blinker 2s linear infinite;
+    font-size: 1.5em;
+    color: #ff3d25;
+}
+
 @keyframes blinker {
     50% {
         opacity: 0;
