@@ -3,7 +3,7 @@
 * This repository contains a tech test for a junior front-end engineer position in [Connecting Food](https://connecting-food.com/).
 
 ## How to start the project?
-* Run `npm install && npm run` 
+* Run `npm install && npm start` 
 * Navigate to `http://localhost:1234`
 
 ## Used Tools : 
